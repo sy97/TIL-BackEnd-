@@ -1,9 +1,7 @@
-//import java.util.Scanner;
-
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Exam1_2 {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  {
 	/*
 	 * 2.키보드로부터 숫자를 입력받아 합게를 출력하는 예제
 	 * 조건1: 0을 입력하면 종료
@@ -13,12 +11,12 @@ public class Exam1_2 {
         int even = 0;
         int odd = 0;
         
-        //Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
 
         System.out.print("숫자입력(0을 입력하면 종료)");
         for( ; ; ) {
-            int input = System.in.read();
+            int input = sc.nextInt();
             sum += input;
             
             if(input == 0) {
