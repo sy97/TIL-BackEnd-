@@ -16,7 +16,7 @@ public class Exam1_2 {
         //Scanner sc = new Scanner(System.in);
 
 
-System.out.print("숫자입력(0을 입력하면 종료)");
+        System.out.print("숫자입력(0을 입력하면 종료)");
         for( ; ; ) {
             int input = System.in.read();
             if(input == 0) {
