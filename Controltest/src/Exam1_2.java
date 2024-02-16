@@ -19,13 +19,13 @@ public class Exam1_2 {
         System.out.print("숫자입력(0을 입력하면 종료)");
         for( ; ; ) {
             int input = System.in.read();
+            sum += input;
+            
             if(input == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
-            }
-            sum += input;
-
-            if(input % 2 == 0) {
+                
+            }else if(input % 2 == 0) {
                 even += input;
             }
             else if(input % 2 != 0) {

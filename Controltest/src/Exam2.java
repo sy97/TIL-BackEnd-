@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Exam2 {
 
 	public static void main(String[] args) throws IOException{
-		// TODO Auto-generated method stub
+		// TODO 예제2
 		/*
 		 * 도움말 시스템
 		 * 1. 반복문을 이용해서 계속 사용할 수 있게 수정

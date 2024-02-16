@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Exam1 {
 
 	public static void main(String[] args) throws IOException{
-		// TODO Auto-generated method stub
+		// TODO 예제1
 
 		/*
 		 * 1. 데이터를 입력받아서 문자인지 아닌지를 판별하는 프로그램 (아스키코드를 이용해보자..?)

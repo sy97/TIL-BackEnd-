@@ -3,6 +3,7 @@ import java.io.IOException;
 public class Exam3 {
 
 	public static void main(String[] args) throws IOException {
+		// TODO 예제3
 		/*
 		 * 1.'.'이 입력될 때까지 키보드 입력을 읽어오는 프로그램 
 		 * 입력된 공백 문자의 수를 세고, 그 총합을 프로그램 마지막에 출력할 수 있도록 작성
