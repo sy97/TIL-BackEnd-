@@ -1,7 +1,10 @@
 class ThisDemo {
+	//필드
 	int iValue;
 	double dValue;
+	//인스턴스 변수
 	
+	//생성자
 	ThisDemo(int iValue, double dValue) {
 			this.iValue = iValue;
 			this.dValue = dValue;//생략되지만, 원래는 이게 정확한 표현
@@ -23,6 +26,7 @@ class ThisDemo {
 	기본 생성자를 내용 없더라도 만들어놓는게 좋음.
 	*/
 		
+	//메서드
 	void display() {
 		System.out.println("결과 :"+ this.iValue+ ", "+ this.dValue);
 		
