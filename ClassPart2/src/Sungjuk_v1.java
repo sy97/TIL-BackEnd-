@@ -44,7 +44,7 @@ public class Sungjuk_v1 {
 			
 		}
 		
-		//등수구하기
+		//등수
 		
 		for(int i = 0; i < num.length; i++) {
 			int cnt=1; //cnt는 내부에 써줘야 계속 1등과 비교가능
@@ -64,12 +64,47 @@ public class Sungjuk_v1 {
 		}
 		
 		
-
+		//정렬(버블정렬사용)
+		for(int row = 0; row < num.length-1; row++) {
+			for(int col = 0; col < num.length-1-row; col++) {
+				if(grade[col] > grade[col+1]) {
+					int temp = kor[col];
+					kor[col] = kor[col+1];
+					kor[col+1]= temp;
+					
+					temp = eng[col];
+					eng[col] = eng[col+1];
+					eng[col+1] = temp;
+					
+					temp = tot[col];
+					tot[col] = tot[col+1];
+					tot[col+1] = temp;
+					
+					temp = avg[col];
+					avg[col] = avg[col+1];
+					avg[col+1] = temp;
+					
+					char temp1 = grade[col];
+					grade[col] = grade[col+1];
+					grade[col+1] = temp1;
+					
+					temp = rank[col];
+					rank[col] = rank[col+1];
+					rank[col+1] = temp;
+					
+				}
+				
+			}
+		}
 		
-		//정렬
-		//정렬을 하려면.. 우선.. 한뭉탱이뭉탱이여야하나..
-		//수직정렬은 어떻게하는거지..?..
+		System.out.println();
 		
+		System.out.println("정렬 후...");
+		for(int i = 0 ; i < num.length; i++) {
+			System.out.println(num[i]+"\t"+kor[i]+"\t"+eng[i]+"\t"
+					+ tot[i]+"\t"+avg[i]+"\t"+grade[i]+"\t"+rank[i]);
+		}
+	
 		
 	}
 
