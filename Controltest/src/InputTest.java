@@ -13,7 +13,7 @@ public class InputTest {
 		
 		System.out.print("숫자입력 : ");
 		int num = System.in.read();
-		System.out.println("입력 받은 값은 " + (num-48) + "입니다.");
+		System.out.println("입력 받은 값은 " + num + "입니다.");
 
 
 
