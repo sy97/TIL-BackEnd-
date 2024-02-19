@@ -11,7 +11,8 @@ public class Sungjuk_v1 {
 		int [] tot = new int[3];
 		int [] avg = new int[3];
 		char [] grade = new char[3];
-		int [] rank = new int[3];
+		int [] rank =new int[3];
+
 		//얼마가 될지 모르니 공간만 준비
 		
 		//총점
@@ -43,14 +44,31 @@ public class Sungjuk_v1 {
 			
 		}
 		
+		//등수구하기
+		
+		for(int i = 0; i < num.length; i++) {
+			int cnt=1; //cnt는 내부에 써줘야 계속 1등과 비교가능
+			for(int j =0; j < num.length; j++) {
+				if(avg[i] < avg[j]) {
+					cnt++;
+				}		
+			}
+			rank[i] = cnt;
+		}
+		
+		
 		System.out.println("학번\t국어\t영어\t총점\t평균\t학점\t등수");
 		for(int i = 0 ; i < num.length; i++) {
 			System.out.println(num[i]+"\t"+kor[i]+"\t"+eng[i]+"\t"
-					+ tot[i]+"\t"+avg[i]+"\t"+grade[i]);
+					+ tot[i]+"\t"+avg[i]+"\t"+grade[i]+"\t"+rank[i]);
 		}
-		//등수구하기
+		
+		
+
 		
 		//정렬
+		//정렬을 하려면.. 우선.. 한뭉탱이뭉탱이여야하나..
+		//수직정렬은 어떻게하는거지..?..
 		
 		
 	}
