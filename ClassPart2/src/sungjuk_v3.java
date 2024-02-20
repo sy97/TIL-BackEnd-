@@ -96,6 +96,8 @@ public class sungjuk_v3 {
 		
 		//정렬 후
 		//정렬을 하려면,, 기준을 또 평균으로 잡은다음에 students[row]의 값을 students[row+1]이랑 바꾸기?
-
+		for(int i = 0; i < students.length; i++) {
+			
+		}
 	}
 }
