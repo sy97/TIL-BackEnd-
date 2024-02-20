@@ -63,12 +63,18 @@ public class Sungjuk_v1 {
 					+ tot[i]+"\t"+avg[i]+"\t"+grade[i]+"\t"+rank[i]);
 		}
 		
-		
+		/*
 		//정렬(버블정렬사용)
 		for(int row = 0; row < num.length-1; row++) {
 			for(int col = 0; col < num.length-1-row; col++) {
-				if(grade[col] > grade[col+1]) {
-					int temp = kor[col];
+				if(rank[col] > rank[col+1]) {
+					//등수 더 높은 사람 순으로 하는거니까 오름차순. 
+					//그러니까 [col]이 [col+1]자리로 가야함.
+					int temp = num[col];
+					num[col] = num[col+1];
+					num[col+1] = temp;
+					
+					temp = kor[col];
 					kor[col] = kor[col+1];
 					kor[col+1]= temp;
 					
@@ -96,10 +102,53 @@ public class Sungjuk_v1 {
 				
 			}
 		}
+		*/
+		
+		
+		 //쌤방식(선택정렬)
+		 for(int row = 0; row < num.length-1; row++){
+		 	for(int col = row+1; col < num.length; col++) {
+		 	
+		 		if(avg[row] > avg[col]){
+		 			//내림차순으로 된거니까
+		 			//[row]가 [row+1]=[col]자리로 가아햠.
+		 			int temp = num[row];
+					num[row] = num[col];
+					num[col] = temp;
+					
+					temp = kor[row];
+					kor[row] = kor[col];
+					kor[col] = temp;
+					
+					temp = eng[row];
+					eng[row] = eng[col];
+					eng[col] = temp;
+					
+					temp = tot[row];
+					tot[row] = tot[col];
+					tot[col] = temp;
+					
+					temp = avg[row];
+					avg[row] = avg[col];
+					avg[col] = temp;
+					
+					temp = grade[row];
+					grade[row] = grade[col];
+					grade[col] = (char)temp;
+					
+					temp = rank[row];
+					rank[row] = rank[col];
+					rank[col] = temp;
+		 			
+		 		}
+		 	}
+		 }
+		 
 		
 		System.out.println();
 		
 		System.out.println("정렬 후...");
+		System.out.println("학번\t국어\t영어\t총점\t평균\t학점\t등수");
 		for(int i = 0 ; i < num.length; i++) {
 			System.out.println(num[i]+"\t"+kor[i]+"\t"+eng[i]+"\t"
 					+ tot[i]+"\t"+avg[i]+"\t"+grade[i]+"\t"+rank[i]);
