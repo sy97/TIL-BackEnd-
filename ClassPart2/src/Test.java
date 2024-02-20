@@ -1,4 +1,4 @@
-class Student{
+class Student1{
 	//원래는 따로 저장해야하는데 편의상 같이
 	
 	//class로 타입이 다른 변수들 묶어주기
@@ -11,7 +11,7 @@ class Student{
 	int rank;
 	char grade;
 	
-		Student(String name, int no, int kor, int eng) {
+		Student1(String name, int no, int kor, int eng) {
 		this.name = name;
 		this.no = no;
 		this.kor = kor;
@@ -19,23 +19,32 @@ class Student{
 	}
 	//객체 생성할 때 값을 저장할 생성자 만들기.
 	//한사람의 정보를 저장할 수 있는 설계도.
+	
 
 }					
-public class sungjuk_v3 {
+class Swap{
+	void swap(Student1[] arr, int n1, int n2) {
+		Student1 temp = arr[n1];
+		arr[n1] = arr[n2];
+		arr[n2] = temp;
+	}
+	
+
+public class Test {
 
 	public static void main(String[] args) {
 		// TODO 클래스와 배열 이용한 성적표
-		
-		Student[] students = new Student[3];
+		Swap sp = new Swap();
+		Student1[] students = new Student1[3];
 		//student클래스의 객체를 3개 생성한게아니다.
 		//Student 클래스의 객체를 담기 위한 참조변수를 생성하것이다.
 		
 		//char[] grade = new char[3]; 이건 객체 생성. 
 		//char는 비객체인 일반 변수 데이터인데, 이렇게하면 객체가 생성되도록 자바가처리해주는거.
 		
-		students[0] = new Student("홍길동", 1, 98, 90);
-		students[1] = new Student("임꺽정", 2, 76, 55);
-		students[2] = new Student("신돌석", 3, 85, 73);
+		students[0] = new Student1("홍길동", 1, 98, 90);
+		students[1] = new Student1("임꺽정", 2, 76, 55);
+		students[2] = new Student1("신돌석", 3, 85, 73);
 		//객체 생성은 생성자를 적어줘야함.	
 		
 		for(int i =0; i<students.length;i++ ) {
@@ -99,14 +108,7 @@ public class sungjuk_v3 {
 			for(int col = row+1; col < students.length; col++) {
 				if(students[row].rank > students[col].rank) {
 					//나보다 랭크가 높다는건, 다른값이 나보다 낮다는거.
-					Student temp = students[row];
-					/*
-					 temp의 데이터타입은 담아줄 데이터타입과 똑같아야하는데, students 배열의 요소가 Student
-					 클래스의 인스턴스이므로 임시변수 'temp'의 타입은 Student이어야한다. 
-					*/
-					students[row] = students[col];
-					students[col] = temp;
-
+					sp.swap(students, row, col);
 				}
 			}
 		}
@@ -125,7 +127,8 @@ public class sungjuk_v3 {
 						+students[i].grade+"\t"
 						+students[i].rank+"\t");
 				System.out.println();
-		}
+			}
 		
+		}
 	}
 }

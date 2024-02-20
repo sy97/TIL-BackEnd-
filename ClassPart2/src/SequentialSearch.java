@@ -15,7 +15,7 @@ public class SequentialSearch {
 		int cnt = 0; //또는 i를 여기에 선언하기.
 		for(int i = 0; i < data.length; i++ ) {
 			cnt++;
-			//플래그기법
+			//플래그기법: 값을 찾았는지 못찾았는지 일단 표시만.
 			if(search == data[i]) {
 				result = true;
 				break;
