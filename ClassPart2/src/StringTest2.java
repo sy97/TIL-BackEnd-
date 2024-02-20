@@ -52,6 +52,15 @@ public class StringTest2 {
 		
 		System.out.println(str9);
 		//"java is number one"이라는 것이 새로운 인스턴스가 만들어져서 거기 거장된것.
+		
+		//수정가능
+		// StringBuffer sb1 = "java"; 이렇게 생성할 수는 없음.
+		StringBuffer sb1 = new StringBuffer("java");
+		StringBuffer sb2 = sb1.append("is number one");
+
+		//concat = append 뒤에 추가
+		System.out.println(sb2);
+		System.out.println(sb1 == sb2);//true 나옴. 둘의 주소가 같다는뜻.
 	}
 
 }
