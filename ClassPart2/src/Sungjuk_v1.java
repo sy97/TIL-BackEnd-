@@ -48,12 +48,15 @@ public class Sungjuk_v1 {
 		
 		for(int i = 0; i < num.length; i++) {
 			int cnt=1; //cnt는 내부에 써줘야 계속 1등과 비교가능
+			rank[i] = cnt;
 			for(int j =0; j < num.length; j++) {
 				if(avg[i] < avg[j]) {
+					//원래 avg[i]가 1등이었는데, avg[j]보다 작으면 rank가 한칸씩 내려갈테니까 cnt++해준다음에 그게 avg[i]의 등수가 되는것.
 					cnt++;
+					rank[i]=cnt;
 				}		
 			}
-			rank[i] = cnt;
+			//rank[i] = cnt;
 		}
 		
 		
