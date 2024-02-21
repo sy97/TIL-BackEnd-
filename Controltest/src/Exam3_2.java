@@ -30,5 +30,7 @@ public class Exam3_2 {
         }
         System.out.println("대문자의 수:" + upper);
         System.out.println("소문자의 수:" + lower);
+        
+ 
 	}
 }

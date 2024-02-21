@@ -112,8 +112,8 @@ public class Sungjuk_v1 {
 		 for(int row = 0; row < num.length-1; row++){
 		 	for(int col = row+1; col < num.length; col++) {
 		 	
-		 		if(avg[row] > avg[col]){
-		 			//내림차순으로 된거니까
+		 		if(avg[row] < avg[col]){
+		 			//<는 오름차순. >는 내림차순. rank는 그 반대.
 		 			//[row]가 [row+1]=[col]자리로 가아햠.
 		 			int temp = num[row];
 					num[row] = num[col];
