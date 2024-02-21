@@ -10,12 +10,15 @@ public class OuterClass2 {
 		얘는 static이 없으니까 outerclass2의 진짜 가족임.
 		바깥에 있는 OuterClass2가 만들어져야만 InnerClass가 만들어지는것.
 		*/
+		
 		private int inner;
 		
 		void innerMethod() {
 			System.out.println("inner : " + inner);
 		
-		
+			outer = 200;
+			System.out.println("outer : " + outer);
+			//일반 클래스의 장점은 외부클래스랑 같은 메모리이기 때문에, 생성하지않아도 바로 쓸 수 있다.
 		}
 		
 	}
@@ -29,7 +32,10 @@ public class OuterClass2 {
 		//InnerClass ic = oc.new InnerClass();
 		
 		//더 간단히, outerclass를 사용할 일이 없다면.
+		//원래는 Outerclass2. InnerClass ic = new OuterClass2().new InnerClass(); 이건데 가족이니까 생략
 		InnerClass ic = new OuterClass2().new InnerClass();
+		//내부클래스의 생성자 호출
+		
 		ic.inner =100;
 		ic.innerMethod();
 		

@@ -15,7 +15,10 @@ public class OuterClass {
 		
 			
 		OuterClass oc = new OuterClass();
+		//생성자 호출
 		oc.outer = 20;
+		//스태틱이니까, 별개의 메모리이므로 외부클래스의 인스턴스 사용하려면 생성을 해줘야함.
+		
 		System.out.println("outer : " + oc.outer);
 		//그래서 이렇게 쉽게 접근 제공받을 수 있음.
 		
