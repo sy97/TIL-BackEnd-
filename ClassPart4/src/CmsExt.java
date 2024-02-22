@@ -41,4 +41,9 @@ public class CmsExt extends Cms{
 		System.out.println("고객 주소 : " + address);
 	}
 	
+	//tostring  오버라이딩. 똑같이 써야하는데, 그럴때 public항상 붙여줘야함.
+	public String toString() {
+		return "[address : " + address + "]" ;
+	}
+	
 }

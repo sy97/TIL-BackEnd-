@@ -13,6 +13,7 @@ public class StringTest2 {
 		//인스턴스= 주소. 메모리낭비 막을 수 있음.
 		
 		System.out.println(str1.equals(str2));
+		//원래 equals는 주소를 비교하는 메서드인데, String class가 이것을 오버라이딩한것. 다른데서는 모두 주소값비교임.
 		System.out.println(str1 == str2);
 		//위에는 값이 같은건지 비교하는걱, 아래는 주소비교
 		
