@@ -9,7 +9,8 @@ public class InheritanceTest {
 		System.out.println("------------------------------------");
 
 		CmsExt hong = new CmsExt(2, "홍길동", 'A', "서울시 강남구");
-		hong.print();
+		hong.display();
+		//오버라이딩한 display로 써야함.
 	}
 
 }

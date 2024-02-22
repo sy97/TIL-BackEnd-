@@ -20,13 +20,24 @@ public class CmsExt extends Cms{
 		
 		this.address = address;
 		
-		
+		/*
+		이 안에는 부모로부터 물려받은 display라는 메서드 있음
+		 
+		void display() {
+			System.out.println("고객 번호 : " + no);
+			System.out.println("고객 이름 : " + name);
+			System.out.println("고객 등급 : " + level);
+		}
+		*/
+	
 	}
 	
-	public void print() {
-		display();
+	//오버라이딩. 부모가 물려준 모양 그대로 가져다가 써야함. 매개변수를 넣어버리면 그건 오버로딩되는거.
+	void display() {
+		//display(); 이건 내가 물려받은 display를 호출하는것. 이렇게하면 재귀호출 되어버림.
 		//this는 생략 가능.
-
+		//부모의 display를 호출해야함.
+		super.display(); // 그래야 재귀호출이 되지않음.
 		System.out.println("고객 주소 : " + address);
 	}
 	
