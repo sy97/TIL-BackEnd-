@@ -12,6 +12,7 @@ class SingletonDemo{
 		return instance;
 	} //값을 직접 넣어주는게 아니라 이렇게 불러주는게 모범적. 
 	//instance가 SingletonDemo 클래스의 인스턴스 이므로 이 메서드의 반환값은 SingletonDemo
+	//instance가 static이니까 static 적어줘야함.
 }
 
 public class SingletonTest {
