@@ -14,10 +14,11 @@ interface Power{
 
 class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 무조건 volumeUP, volumeDown을 써야한다.(표준화)
 	private int vol; //볼륨 변수 준비
+	private Scanner sc;
 
 	
 	TV() {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		System.out.print("TV를 켜시겠습니까?(Y/N):");
 		String input = sc.nextLine();
 		if(input.equals("Y")) {
@@ -31,7 +32,7 @@ class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 �
 	}
 	
 	public void volumeUP(int vol) {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		this.vol += vol;
 		if(vol  >= 50) {
 			System.out.println("소리는 50 미만으로 설정이 가능합니다.다시 입력해주시기 바랍니다.:");
@@ -44,7 +45,7 @@ class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 �
 
 	@Override //@붙은거: annotation. 아직 구현되지 않는 메서드를 추가해주겠다.
 	public void volumeDown(int vol) {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		this.vol -= vol;
 		if(vol <= 0) {
 			System.out.println("MUTE");
@@ -61,7 +62,7 @@ class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 �
 
 	@Override
 	public void powerOn() {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		int input = sc.nextInt();
 		System.out.println("TV가 켜졌습니다.");
 		System.out.println("볼륨을 조절하시겠습니까?");
