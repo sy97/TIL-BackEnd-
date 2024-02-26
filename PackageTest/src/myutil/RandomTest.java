@@ -1,6 +1,7 @@
 package myutil;
 
 import java.util.Random;
+import java.util.HashSet;
 public class RandomTest {
 
 	public static void main(String[] args) {
@@ -17,6 +18,8 @@ public class RandomTest {
 			//원래는 (10-0) + 0 이렇게 적어준거랑 똑같음.
 		}
 		
+	
+		
 		
 		//0~1사이의 랜덤숫자
 		for(int i = 0; i < 5; i++) {
@@ -26,6 +29,12 @@ public class RandomTest {
 		//21<= X < 35 사이의 난수: (최대값-최소값) + 21
 		for(int i = 0; i < 5; i++) {
 			System.out.println(r.nextInt(35-21)+21);
+		}
+		
+		System.out.println("-----------------------");
+		int[] lotto = new int[6];
+		for(int i = 0; i < 6; i++) {
+			lotto[i]=r.nextInt(44)+1;
 		}
 		
 	}

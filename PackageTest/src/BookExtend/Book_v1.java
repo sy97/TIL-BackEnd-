@@ -7,7 +7,7 @@ public class Book_v1 extends Book {
 private String pubName;
 	
 	public Book_v1(String t, String a, int y, String p){
-		//다른 곳에서 이 패키지의 이 클래스를 사용하려면 pulbic으로 바꿔줘야함.
+		//다른 곳에서 이 패키지의 이 클래스를 사용하려면 public으로 바꿔줘야함.
 
 		super.title = t;
 		super.author = a;
