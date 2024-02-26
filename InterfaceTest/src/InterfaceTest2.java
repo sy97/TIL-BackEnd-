@@ -34,12 +34,12 @@ class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 �
 	public void volumeUP(int vol) {
 		sc = new Scanner(System.in);
 		this.vol += vol;
-		if(vol  >= 50) {
+		if(this.vol  >= 50) {
 			System.out.println("소리는 50 미만으로 설정이 가능합니다.다시 입력해주시기 바랍니다.:");
 			this.display(sc.nextInt());
 		}
 		else{
-			this.display(vol);
+			this.display(this.vol);
 		}
 	}
 
@@ -47,11 +47,11 @@ class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 �
 	public void volumeDown(int vol) {
 		sc = new Scanner(System.in);
 		this.vol -= vol;
-		if(vol <= 0) {
+		if(this.vol <= 0) {
 			System.out.println("MUTE");
 		}
 		else{
-			this.display(vol);
+			this.display(this.vol);
 		};
 	}
 	
@@ -63,10 +63,10 @@ class TV implements Volume, Power{ //오버라이딩을 해야하기때문에 �
 	@Override
 	public void powerOn() {
 		sc = new Scanner(System.in);
-		int input = sc.nextInt();
 		System.out.println("TV가 켜졌습니다.");
 		System.out.println("볼륨을 조절하시겠습니까?");
 		System.out.print("1.증가 /2.감소 : ");
+		int input = sc.nextInt();
 		if(input==1) {
 			System.out.print("얼마나 증가시킬까요? :" );
 			this.volumeUP(sc.nextInt());
@@ -138,10 +138,11 @@ class Radio implements Volume, Power {
 	@Override
 	public void powerOn() {
 		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt();
 		System.out.println("Radio가 켜졌습니다.");
 		System.out.println("볼륨을 조절하시겠습니까?");
 		System.out.print("1.증가 /2.감소 : ");
+		
+		int input = sc.nextInt();
 		if(input==1) {
 			System.out.print("얼마나 증가시킬까요? :" );
 			this.volumeUP(sc.nextInt());
@@ -210,10 +211,10 @@ class Speaker implements Volume, Power {
 	@Override
 	public void powerOn() {
 		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt();
 		System.out.println("Speaker가 켜졌습니다.");
 		System.out.println("볼륨을 조절하시겠습니까?");
 		System.out.print("1.증가 /2.감소 : ");
+		int input = sc.nextInt();
 		if(input==1) {
 			System.out.print("얼마나 증가시킬까요? :" );
 			this.volumeUP(sc.nextInt());
