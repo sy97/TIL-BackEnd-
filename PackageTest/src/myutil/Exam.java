@@ -46,11 +46,13 @@ public class Exam {
 			user = 0;
 		}
 		else if(input == "바위") {
-			user = 1;
+			user = 1; 
 		}
 		else if(input == "보") {
 			user = 2;
 		}
+		
+		//가위일때
 		
 		
 		//중복 없이 로또번호
