@@ -23,7 +23,6 @@ public class Test4 {
 		// TODO Auto-generated method stub
 		//그래서 메인이 해줌.
 		
-
 	
 		try {
 			first();
