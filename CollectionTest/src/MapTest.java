@@ -27,6 +27,13 @@ public class MapTest {
 		Set set = map.keySet();
 		Iterator it = set.iterator();
 		while(it.hasNext()) {
+			
+			/*
+			원래 서로다른 클래스는 캐스팅을 할 수 없음.
+			근데 왜 여기서는 캐스팅이 됐을까?.. 
+			하지만 부모는 자식을 참조할 수 있고, 자식에게 다시 돌려줄 수 있음. 
+			여기서는 next메서드가 부모임. 
+			*/
 			String key = (String)it.next();
 			System.out.println(map.get(key));
 		}
