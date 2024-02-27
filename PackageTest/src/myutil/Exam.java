@@ -38,26 +38,41 @@ public class Exam {
 		Scanner sc = new Scanner(System.in);
 			
 		int game = r.nextInt(3);
-		System.out.println(game);
-			
+		String comp = null;
+		if(game == 0) {
+			comp = "가위";
+		}
+		else if(game == 1) {
+			comp = "바위";
+		}
+		else if(game == 2) {
+			comp = "보";
+		}
+		
+		System.out.print("가위바위보 게임! 가위,바위,보 중 하나를 입력하세요.:");
 		String input = sc.next();
-		int user;
-		if(input == "가위") {
-			user = 0;
-		}
-		else if(input == "바위") {
-			user = 1; 
-		}
-		else if(input == "보") {
-			user = 2;
-		}
 		
-		//가위일때
+		//비겼을때
+		if(input.equals(comp)) {
+			System.out.println("비겼습니다.");
+		}
+		//이기는 경우
+		else if((input.equals("가위")&&comp.equals("보")) ||
+				(input.equals("바위")&&comp.equals("가위")) ||
+				(input.equals("보")&&comp.equals("주먹"))) {
+			System.out.println("이겼습니다.");
+		}
+		else
+			System.out.println("졌습니다.");
 		
+		System.out.println("컴퓨터가 낸 것 :" + comp);
+		
+		System.out.println("--------------------------------------");
 		
 		//중복 없이 로또번호
 		//배열 45개를 담아서 번호를 담고, 이미 선택된 번호는 삭제?
 		int[] lottonums = new int[45];
+
 		for(int i = 0; i<lottonums.length; i++) {
 			lottonums[i] = r.nextInt(44)+1;
 			

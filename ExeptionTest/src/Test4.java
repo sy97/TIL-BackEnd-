@@ -22,6 +22,9 @@ public class Test4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//그래서 메인이 해줌.
+		
+
+	
 		try {
 			first();
 		}
@@ -36,6 +39,7 @@ public class Test4 {
 			err.printStackTrace();
 			
 		}
+		
 	}
 
 }
