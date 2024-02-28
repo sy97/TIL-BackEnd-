@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class FileTest2 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO 키보드로부터 입력받아 파일로 저장
+		// TODO 키보드로부터 입력받아 파일 만들기. 문자열로. 
 		
 		FileWriter fw =
 				new FileWriter("C:\\fullstack\\Backend\\JAVAwork\\FileTest\\chartest.txt");
@@ -20,11 +20,12 @@ public class FileTest2 {
 		while(true) {
 			String input = br.readLine();
 			
-			if(input == null) {
+			if(input.equals(".")) {
 				break;
 			}
 		
-			fw.write(input);
+			fw.write(input+"\n");
+			//줄바꿈
 			fw.flush();
 			
 		}
