@@ -7,14 +7,14 @@ import java.io.InputStreamReader;
 
 public class FileTest2 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args){
 		// TODO 키보드로부터 입력받아 파일 만들기. 문자열로. 
-		
-		FileWriter fw =
-				new FileWriter("C:\\fullstack\\Backend\\JAVAwork\\FileTest\\chartest.txt");
+		FileWriter fw = null;
+		BufferedReader br = null;
+		try {
+				fw = new FileWriter("C:\\fullstack\\Backend\\JAVAwork\\FileTest\\chartest.txt");
 	
-		BufferedReader br =
-				new BufferedReader(new InputStreamReader(System.in));
+				br = new BufferedReader(new InputStreamReader(System.in));
 		//system.in을 문자스트림으로 바꿔주고, 한줄로 읽어올 수 있도록 bufferedreader로 감싸주기
 		
 		while(true) {
@@ -28,10 +28,25 @@ public class FileTest2 {
 			//줄바꿈
 			fw.flush();
 			
+			}
+		
 		}
-		fw.close();
-		//까먹지말기.
-
+		
+		catch(Exception e) {
+			//크게 잡았는데, 이렇게 잡으면 자세히 잡기는 어려움. 자식클래스 사용하는게 좋긴함.
+			System.out.println("에러처리완료.");
+			System.out.println(e);
+		}
+		
+		finally {
+			try {
+			fw.close();
+			br.close();}
+			catch(IOException e) {}
+			//여기도 예외처리해줘야함.
+			
+		}
+	
 	}
 
 }

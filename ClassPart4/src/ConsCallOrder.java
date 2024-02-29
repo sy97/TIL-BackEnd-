@@ -43,7 +43,7 @@ public class ConsCallOrder {
 	new C();
 	//C생성자 불러줌.
 	//A-> B / B -> A 상속관계. A,B,C 생성자 모두 만들어짐.
-	//그리고 부고마 건저 생성됨.
+	//그리고 부모가 먼저 생성됨.
 		
 	}
 
