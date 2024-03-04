@@ -25,7 +25,7 @@ public class Main {
 		int j = sc.nextInt();
 		
 		//역순
-		for(int k = i-1; k < j; k++) {
+		for(int k = i-1; k < N; k++) {
 			int temp = arr[j-1];
 			arr[j-1] = arr[k];
 			arr[k] = temp;
