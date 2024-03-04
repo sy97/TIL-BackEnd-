@@ -1,3 +1,5 @@
+//비동기방식
+
 class Toilet {
 	//synchronized 키워드 : 메서드, 블록을 동기식으로 처리해준다. 여러개의 스레드가 동시에 사용할 수 없게 한다.
 	public synchronized void openDoor(String name) { //누가 들어왔는지 매개변수로 받기, 키값이 실행되는 동안 누가 들어올 수 없게
