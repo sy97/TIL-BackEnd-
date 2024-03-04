@@ -1,22 +1,31 @@
 class ThreadDemo4 extends Thread {
 	String name;
 	
-	ThreadDemo4(String name){
+	ThreadDemo4(String name) throws InterruptedException{
 		super(name);
+		start();
+		
 	}
 
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		for(int i = 0; i<5; i++) {
+			try {
+				sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println(getName() + " : " + i);
 		}
 	}
 }
 
 public class ThreadTest3 {
+	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO 문제
 		ThreadDemo4 d1 = new ThreadDemo4("스레드1");
 		ThreadDemo4 d2 = new ThreadDemo4("스레드2");
