@@ -6,35 +6,32 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
-		//바구니 갯수
-		int M = sc.nextInt();
-		//역순 방법 횟수
+		//과목수
 		int N = sc.nextInt();
 		
-		//배열생성
-		int[] arr = new int[M];
+		//배열 생성
+		int[] arr = new int[N];
 		
-		//배열에 숫자넣기
-		for(int i = 0; i < arr.length; i++) {
-			arr[i] = i+1;
+		//성적 부여
+		for(int i = 0; i < N ; i ++ ) {
+			arr[i] = sc.nextInt();
 		}
 		
-		//몇번부터
-		int i = sc.nextInt();
-		//몇번
-		int j = sc.nextInt();
-		
-		//역순
-		for(int k = i-1; k < N; k++) {
-			int temp = arr[j-1];
-			arr[j-1] = arr[k];
-			arr[k] = temp;
+		//최댓값 찾기
+		int max = 0;
+		for(int i = 0; i < N; i++ ) {
+			if(max<arr[i]) {
+				max = arr[i];
+			}
+		}
+		int sum = 0;
+		int avg = 0;
+		for(int i = 0; i < N; i++) {
+			sum += (arr[i]/max)*100;
+			avg = sum/N;
 		}
 		
-		for(int n : arr) {
-			System.out.println(n);
-		}
-		
+		System.out.println(avg);
 	}
 
 }
